@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christal Spata | The Reverse Agent</title>
+<meta name="description" content="Ultra-high-net-worth real estate advisory across multiple states. Expert in the client, not the zip code. Strategic representation for centimillionaires and billionaires navigating tax migration.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#0a0a0a;--offblack:#111111;--gold:#c4a265;--cream:#f5f0e8;--gray:#8a8a8a;--gray-light:#b5b5b5;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',-apple-system,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--cream);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:var(--black)}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 2rem}
+.label{font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.2rem}
+.stitle{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:300;line-height:1.2;margin-bottom:1.5rem}
+.body-text{font-size:0.95rem;line-height:1.8;color:var(--gray-light);font-weight:300;max-width:680px}
+.gold-line{width:50px;height:1px;background:var(--gold);opacity:0.4}
+section{padding:7rem 3rem;position:relative}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(196,162,101,0.08);transition:padding 0.4s}
+nav.scrolled{padding:0.9rem 3rem}
+.nav-logo{font-family:var(--serif);font-size:1.3rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase}
+.nav-logo b{color:var(--gold);font-weight:400}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray-light);font-weight:400;transition:color 0.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{padding:0.55rem 1.6rem !important;border:1px solid var(--gold) !important;color:var(--gold) !important;transition:all 0.3s !important}
+.nav-cta:hover{background:var(--gold) !important;color:var(--black) !important}
+
+.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 6rem;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 40%,rgba(196,162,101,0.05) 0%,transparent 55%),radial-gradient(ellipse at 80% 70%,rgba(196,162,101,0.03) 0%,transparent 50%)}
+.hero-inner{max-width:860px;position:relative;z-index:1}
+.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,5.5vw,4.2rem);font-weight:300;line-height:1.12;margin-bottom:1.8rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-metrics{display:flex;gap:3.5rem;margin-top:3.5rem;flex-wrap:wrap}
+.metric h3{font-family:var(--serif);font-size:1.6rem;font-weight:300;color:var(--gold);margin-bottom:0.2rem}
+.metric p{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray)}
+.hero-scroll{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray)}
+.hero-scroll::after{content:'';display:block;width:1px;height:40px;background:var(--gold);opacity:0.3;margin:0.8rem auto 0}
+
+.about{background:var(--offblack)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:2.5rem}
+.about-text p{font-size:0.92rem;line-height:1.85;color:var(--gray-light);font-weight:300;margin-bottom:1.2rem}
+.about-text p strong{color:var(--cream);font-weight:500}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.about-stat{padding:1.8rem;border:1px solid rgba(196,162,101,0.12);text-align:center}
+.about-stat h3{font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--gold)}
+.about-stat p{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);margin-top:0.3rem}
+
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.5rem}
+.model-card{padding:2.2rem;border:1px solid rgba(196,162,101,0.12);position:relative;transition:border-color 0.4s}
+.model-card:hover{border-color:rgba(196,162,101,0.4)}
+.model-card .num{font-family:var(--serif);font-size:2.5rem;font-weight:300;color:var(--gold);opacity:0.2;position:absolute;top:1.2rem;right:1.5rem}
+.model-card h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;margin-bottom:0.8rem}
+.model-card p{font-size:0.88rem;line-height:1.7;color:var(--gray-light);font-weight:300}
+
+.process{background:var(--offblack)}
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin-top:3rem}
+.process-step{text-align:center;padding:1.5rem 1rem;position:relative}
+.process-step::after{content:'\2192';position:absolute;right:-1rem;top:2.2rem;color:var(--gold);opacity:0.3;font-size:1.2rem}
+.process-step:last-child::after{display:none}
+.step-num{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--gold);opacity:0.4;margin-bottom:0.5rem}
+.process-step h4{font-family:var(--serif);font-size:1.05rem;margin-bottom:0.6rem}
+.process-step p{font-size:0.78rem;line-height:1.6;color:var(--gray);font-weight:300}
+
+.tiers{margin-top:2.5rem}
+.tier{display:grid;grid-template-columns:260px 1fr;gap:3rem;padding:2.5rem 0;border-bottom:1px solid rgba(196,162,101,0.08)}
+.tier:last-child{border-bottom:none}
+.tier-label h3{font-family:var(--serif);font-size:1.7rem;font-weight:300}
+.tier-label .price{font-size:0.78rem;letter-spacing:0.08em;color:var(--gold);margin-top:0.4rem}
+.tier-body p{font-size:0.92rem;line-height:1.8;color:var(--gray-light);font-weight:300;margin-bottom:0.8rem}
+.tier-body ul{list-style:none;padding:0}
+.tier-body li{font-size:0.85rem;line-height:1.7;color:var(--gray-light);font-weight:300;padding-left:1.2rem;position:relative;margin-bottom:0.4rem}
+.tier-body li::before{content:'\2014';position:absolute;left:0;color:var(--gold);font-size:0.7rem}
+
+.migration{background:var(--offblack)}
+.mig-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin:3rem 0}
+.mig-stat{text-align:center;padding:2rem 1rem;border:1px solid rgba(196,162,101,0.1)}
+.mig-stat h3{font-family:var(--serif);font-size:2.2rem;font-weight:300;color:var(--gold)}
+.mig-stat p{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray);margin-top:0.3rem;line-height:1.5}
+.mig-markets{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem}
+.mig-col h4{font-family:var(--serif);font-size:1.2rem;margin-bottom:1rem;color:var(--gold)}
+.mig-col p{font-size:0.88rem;line-height:1.7;color:var(--gray-light);font-weight:300}
+
+.intel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+.intel-card{padding:2rem;background:var(--offblack);border-left:2px solid var(--gold)}
+.intel-card h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:0.7rem}
+.intel-card p{font-size:0.85rem;line-height:1.65;color:var(--gray-light);font-weight:300}
+
+.cred{background:var(--offblack)}
+.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:2.5rem}
+.cred-item{text-align:center;padding:2rem 1.2rem}
+.cred-item h4{font-family:var(--serif);font-size:1.05rem;margin-bottom:0.5rem}
+.cred-item p{font-size:0.78rem;color:var(--gray);line-height:1.5;font-weight:300}
+
+.philosophy{text-align:center;padding:8rem 3rem}
+.philosophy blockquote{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:300;line-height:1.4;color:var(--cream);max-width:750px;margin:0 auto 2rem;font-style:italic}
+.philosophy .attribution{font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
+
+.contact{text-align:center;padding:8rem 3rem 6rem}
+.contact h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;margin-bottom:1.5rem}
+.contact .body-text{margin:0 auto 2.5rem;text-align:center}
+.cta-btn{display:inline-block;padding:1rem 3rem;border:1px solid var(--gold);color:var(--gold);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;transition:all 0.4s}
+.cta-btn:hover{background:var(--gold);color:var(--black)}
+.contact-email{display:block;margin-top:1.8rem;color:var(--gray);font-size:0.85rem;transition:color 0.3s;letter-spacing:0.03em}
+.contact-email:hover{color:var(--gold)}
+.contact-note{margin-top:3rem;font-size:0.72rem;color:var(--gray);letter-spacing:0.08em;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
+
+footer{padding:2.5rem 3rem;text-align:center;border-top:1px solid rgba(196,162,101,0.06);font-size:0.65rem;color:var(--gray);letter-spacing:0.08em}
+footer b{color:var(--gold);font-weight:400}
+footer .f2{margin-top:0.4rem}
+
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}.nav-links{display:none}section{padding:4.5rem 1.5rem}
+  .hero{padding:6rem 1.5rem 4rem}.hero-scroll{display:none}
+  .about-grid,.model-grid,.mig-markets{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr;gap:1rem}.process-step::after{display:none}
+  .tier{grid-template-columns:1fr;gap:1rem}
+  .mig-stats{grid-template-columns:1fr 1fr}.intel-grid{grid-template-columns:1fr}.cred-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:500px){.mig-stats,.cred-grid,.about-stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">Christal <b>Spata</b></a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#model">The Model</a>
+    <a href="#advisory">Advisory</a>
+    <a href="#migration">Tax Migration</a>
+    <a href="#intelligence">Intelligence</a>
+    <a href="#contact" class="nav-cta">Inquire</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="label">The Reverse Agent &mdash; Engel &amp; V&ouml;lkers</p>
+    <h1>I become an expert<br>in <em>you</em>, not a zip code.</h1>
+    <p class="body-text">When your real estate decisions span multiple states, tax jurisdictions, and generational wealth strategies, you need one trusted advisor who follows you &mdash; not a different stranger in every market. I provide dedicated, intelligence-driven real estate representation for ultra-high-net-worth individuals and families.</p>
+    <div class="hero-metrics">
+      <div class="metric"><h3>$30M+</h3><p>Transaction Focus</p></div>
+      <div class="metric"><h3>Multi-State</h3><p>Representation</p></div>
+      <div class="metric"><h3>AI-Powered</h3><p>Intelligence Platform</p></div>
+      <div class="metric"><h3>Absolute</h3><p>Discretion</p></div>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll<br><span style="display:inline-block;width:1px;height:35px;background:var(--gold);opacity:0.3;margin-top:8px"></span></div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <p class="label">About</p>
+    <h2 class="stitle">A fundamentally different kind<br>of real estate practice.</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>The traditional real estate model asks agents to be experts in a neighborhood and serve as many clients as possible. <strong>I built the opposite.</strong></p>
+        <p>I become an expert in each client &mdash; their financial structure, family dynamics, tax exposure, security requirements, timeline, and long-term vision &mdash; and follow them across state lines. When a client acquires a lakefront compound in one state, relocates their primary residence to another, and sells a property in a third, they work with one advisor who understands the full picture. Not three strangers who each know one market.</p>
+        <p>I call this the <strong>reverse agent</strong> model. Instead of knowing every house on the block, I know every detail about the people I represent. That depth is what allows me to coordinate with wealth advisors, estate attorneys, tax strategists, and family offices at the level these transactions demand.</p>
+        <p>My practice is augmented by <strong>proprietary AI intelligence systems</strong> that monitor markets, track ownership changes, build prospect research dossiers, and synthesize data around the clock. Technology handles the breadth. I handle the depth, the judgment, and the relationships.</p>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat"><h3>UHNW</h3><p>Exclusive Client Focus</p></div>
+        <div class="about-stat"><h3>Multi-State</h3><p>Licensed &amp; Expanding</p></div>
+        <div class="about-stat"><h3>24/7</h3><p>AI Market Monitoring</p></div>
+        <div class="about-stat"><h3>E&amp;V</h3><p>Global Luxury Network</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="wrap">
+    <p class="label">The Model</p>
+    <h2 class="stitle">Four pillars that define<br>how I serve clients.</h2>
+    <div class="model-grid">
+      <div class="model-card"><span class="num">01</span><h3>Client-Centric, Not Geographic</h3><p>Most agents specialize in a zip code and serve hundreds of clients. I specialize in you. Your financial picture, your family situation, your business structure, your timeline. Every recommendation I make is informed by the complete context of your life, not just the comparable sales within a mile radius.</p></div>
+      <div class="model-card"><span class="num">02</span><h3>Multi-State Representation</h3><p>Licensed across multiple states and actively expanding into every major destination market. You should never need a different agent every time your life crosses a state border. One advisor. One relationship. One person who understands the full arc of your real estate strategy, regardless of geography.</p></div>
+      <div class="model-card"><span class="num">03</span><h3>Intelligence-Driven Preparation</h3><p>I deploy AI-powered research systems that monitor markets, identify opportunities, and build comprehensive intelligence dossiers 24 hours a day. When I sit at a negotiation table, I know more about the property, the seller's motivation, the ownership history, the tax basis, and the comparable transaction universe than anyone else in the room.</p></div>
+      <div class="model-card"><span class="num">04</span><h3>Absolute Discretion</h3><p>Your name does not appear in my marketing. Your strategy is never discussed outside our engagement. Your financial details are held in strict confidence. Every aspect of our work together operates under complete discretion. This is not a feature of my practice. It is the non-negotiable foundation upon which everything else is built.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <p class="label">The Engagement</p>
+    <h2 class="stitle">How we work together.</h2>
+    <p class="body-text">Every engagement begins with understanding, not showing properties. I invest in learning the full context before making a single recommendation.</p>
+    <div class="process-steps">
+      <div class="process-step"><div class="step-num">01</div><h4>Discovery</h4><p>A confidential conversation to understand your situation, goals, timeline, and the full picture of your real estate needs across all geographies.</p></div>
+      <div class="process-step"><div class="step-num">02</div><h4>Strategy</h4><p>I develop a comprehensive strategy in coordination with your wealth advisor, estate attorney, and tax strategist. Entity structure, tax implications, and timing are addressed before we look at a single property.</p></div>
+      <div class="process-step"><div class="step-num">03</div><h4>Intelligence</h4><p>My AI systems identify target properties, build research dossiers, and surface opportunities including off-market inventory through the Engel &amp; V&ouml;lkers global network matched to your criteria.</p></div>
+      <div class="process-step"><div class="step-num">04</div><h4>Execution</h4><p>Negotiation, due diligence, and closing with the preparation depth that $30M+ transactions demand. I manage counterparty dynamics, contingencies, and coordination across jurisdictions.</p></div>
+      <div class="process-step"><div class="step-num">05</div><h4>Continuation</h4><p>The relationship does not end at closing. I remain your real estate advisor for future acquisitions, dispositions, and market intelligence. When your life moves, I move with you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="advisory">
+  <div class="wrap">
+    <p class="label">Advisory Services</p>
+    <h2 class="stitle">Strategic real estate intelligence<br>for UHNW individuals and families.</h2>
+    <p class="body-text" style="margin-bottom:1rem;">For clients who are not yet ready to transact but want dedicated intelligence and strategic guidance, I offer a monthly advisory retainer. Advisory fees are credited toward buyer representation when a transaction begins.</p>
+    <div class="tiers">
+      <div class="tier"><div class="tier-label"><h3>Intelligence</h3><p class="price">From $1,500 / month</p></div><div class="tier-body"><p>For UHNW individuals in the exploration phase of a relocation or major acquisition.</p><ul><li>Monthly market intelligence briefings covering your chosen destination markets</li><li>AI-powered analysis of inventory, pricing trends, and off-market opportunities</li><li>Curated delivery with strategic context specific to your situation</li><li>Quarterly 30-minute strategy call to refine your approach</li><li>Access to private market alert channel for time-sensitive opportunities</li></ul></div></div>
+      <div class="tier"><div class="tier-label"><h3>Advisory</h3><p class="price">From $3,500 / month</p></div><div class="tier-body"><p>For those within 6-12 months of a move who need active strategic guidance.</p><ul><li>Everything in Intelligence</li><li>Bi-weekly strategy calls with dedicated attention to your timeline</li><li>Active property search across your destination markets</li><li>AI-powered matching that surfaces properties before the MLS</li><li>Domicile compliance tracking for tax migration</li><li>Coordination with your wealth advisor and estate attorney on real estate strategy</li></ul></div></div>
+      <div class="tier"><div class="tier-label"><h3>Concierge</h3><p class="price">From $7,500 / month</p></div><div class="tier-body"><p>Full-spectrum representation for active buyers with immediate timelines and $25M+ budgets.</p><ul><li>Everything in Advisory</li><li>Priority access to off-market inventory via the Engel &amp; V&ouml;lkers global network</li><li>Direct coordination between your entire advisory team and my practice</li><li>White-glove relocation project management</li><li>Advisory fees credited toward buyer representation commission</li><li>On-call availability for time-sensitive decisions</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="migration" id="migration">
+  <div class="wrap">
+    <p class="label">Tax Migration Advisory</p>
+    <h2 class="stitle">The largest wealth migration in<br>American history is underway.</h2>
+    <p class="body-text">Centimillionaires and billionaires are exiting high-tax states at an unprecedented rate. The real estate component of this transition is the most complex, highest-stakes decision in the process &mdash; and the one with the least dedicated professional oversight. I exist to change that.</p>
+    <div class="mig-stats">
+      <div class="mig-stat"><h3>$111B</h3><p>Adjusted Gross Income<br>lost by New York<br>in the last decade</p></div>
+      <div class="mig-stat"><h3>$196B</h3><p>AGI gained by Florida<br>from interstate<br>wealth migration</p></div>
+      <div class="mig-stat"><h3>60:40</h3><p>Ratio of $200K+ earners<br>leaving high-tax states<br>vs. entering them</p></div>
+      <div class="mig-stat"><h3>128K</h3><p>Millionaires who<br>relocated in 2025<br>a record year</p></div>
+    </div>
+    <div class="mig-markets">
+      <div class="mig-col"><h4>Exiting</h4><p>I advise clients relocating from California, New York, Massachusetts, New Jersey, Illinois, Washington, and other high-tax jurisdictions. Each presents unique challenges: residency audit exposure, capital gains triggers on departure, estate tax thresholds, and timing complexities that require coordinated planning across your entire advisory team.</p></div>
+      <div class="mig-col"><h4>Arriving</h4><p>My destination market expertise covers tax-friendly, entrepreneur-friendly, and AI/crypto-friendly states including Florida, Texas, Tennessee, Nevada, Wyoming, South Dakota, and New Hampshire. I help clients navigate not just the real estate acquisition, but the full domicile establishment process including day-count compliance, documentation requirements, and audit-proof residency positioning.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="intelligence">
+  <div class="wrap">
+    <p class="label">The Intelligence Edge</p>
+    <h2 class="stitle">AI-powered research depth.<br>Human judgment and relationships.</h2>
+    <p class="body-text">I deploy autonomous AI systems that monitor markets, track ownership changes, and synthesize intelligence around the clock. Technology handles the breadth. I handle the depth. The result is a level of preparation and insight that no traditional agent can match.</p>
+    <div class="intel-grid">
+      <div class="intel-card"><h4>Real-Time Market Intelligence</h4><p>Continuous monitoring across multiple state markets. New luxury inventory, pricing shifts, days-on-market trends, and off-market opportunities are surfaced and analyzed before the broader market becomes aware. You receive intelligence, not just information.</p></div>
+      <div class="intel-card"><h4>Property &amp; Counterparty Research</h4><p>Comprehensive dossiers on every property under consideration: full ownership history, tax basis analysis, comparable transaction mapping, seller motivation assessment, and structural due diligence findings. When we negotiate, we negotiate from a position of knowledge.</p></div>
+      <div class="intel-card"><h4>Domicile Compliance Tracking</h4><p>For clients navigating tax migration: automated monitoring of day-counts across states, statutory residency threshold alerts, and documentation tracking to ensure your domicile change is audit-proof. Coordinated with your tax strategist for seamless compliance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cred">
+  <div class="wrap" style="text-align:center;">
+    <p class="label">Credentials &amp; Affiliations</p>
+    <h2 class="stitle">Built for this level of service.</h2>
+    <div class="cred-grid">
+      <div class="cred-item"><h4>Engel &amp; V&ouml;lkers</h4><p>Global luxury real estate network with over 1,000 shops across 35+ countries and 5 continents</p></div>
+      <div class="cred-item"><h4>Multi-State Licensed</h4><p>Licensed and actively expanding across key destination markets nationwide to follow clients wherever they go</p></div>
+      <div class="cred-item"><h4>UHNW Specialization</h4><p>Exclusive focus on ultra-high-net-worth individuals and families with complex, multi-state real estate needs</p></div>
+      <div class="cred-item"><h4>AI-Augmented Practice</h4><p>Proprietary intelligence systems for 24/7 market monitoring, prospect research, and strategic client advisory</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="gold-line" style="margin:0 auto 3rem"></div>
+  <blockquote>&ldquo;The best agents in the next decade will not be the ones who know every house on the block. They will be the ones who know every detail about the people they represent.&rdquo;</blockquote>
+  <p class="attribution">Christal Spata</p>
+</section>
+
+<section class="contact" id="contact">
+  <p class="label">Begin a Conversation</p>
+  <h2>Engagements begin with<br>a confidential conversation.</h2>
+  <p class="body-text" style="text-align:center;margin:0 auto 2.5rem;">If you are an ultra-high-net-worth individual navigating a complex real estate decision, a wealth advisor seeking dedicated representation for your clients, or a family office exploring strategic real estate advisory, I welcome your inquiry. All conversations are held in strict confidence.</p>
+  <a href="mailto:christal@christalspata.com" class="cta-btn">Request a Confidential Consultation</a>
+  <a href="mailto:christal@christalspata.com" class="contact-email">christal@christalspata.com</a>
+  <p class="contact-note">I respond personally to every qualified inquiry, typically within 24 hours. Please include a brief description of your situation and how I can be of service.</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Christal Spata &nbsp;|&nbsp; <b>The Reverse Agent</b> &nbsp;|&nbsp; Engel &amp; V&ouml;lkers</p>
+  <p class="f2">Multi-State Licensed &nbsp;&nbsp;|&nbsp;&nbsp; All inquiries held in strict confidence</p>
+</footer>
+
+<script>
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+</script>
+</body>
+</html>
