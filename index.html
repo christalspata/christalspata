@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reverse Agent â Multi-State Real Estate Advisory</title>
+<title>Reverse Agent | One Agent. Every Property. Every Market.</title>
+<meta name="description" content="Reverse Agent is the single point of contact for ultra-high-net-worth real estate. One agent for buying, selling, and managing luxury properties across every market nationally.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,6 +34,14 @@ body {
   letter-spacing: 0.02em;
 }
 .logo span { color: #ffffff; font-weight: 400; }
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-link {
+  font-size: .8rem; font-weight: 500; color: #a0a8b8;
+  letter-spacing: .1em; text-transform: uppercase;
+  text-decoration: none; transition: color .3s;
+}
+.nav-link:hover { color: #c1a776; }
+.nav-link.active { color: #c1a776; }
 .nav-cta {
   padding: 0.6rem 1.5rem;
   background: transparent;
@@ -84,7 +93,7 @@ body {
 }
 .hero-sub {
   font-size: 1.15rem; font-weight: 300;
-  color: #a0a8b8; max-width: 680px; margin: 0 auto 2.5rem;
+  color: #a0a8b8; max-width: 700px; margin: 0 auto 2.5rem;
   line-height: 1.7;
 }
 .hero-stats {
@@ -158,44 +167,77 @@ section { padding: 6rem 3rem; }
 }
 .step p { font-size: 0.9rem; color: #8a92a6; line-height: 1.65; }
 
-/* STATES */
-.states { background: #0d1226; }
-.state-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
-.state-pill {
+/* SERVICES */
+.services { background: #0d1226; }
+.services-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; margin-top: 2.5rem;
+}
+.service-card {
+  padding: 2.5rem 2rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(193, 167, 118, 0.1);
+  border-radius: 2px;
+  transition: border-color 0.3s;
+}
+.service-card:hover { border-color: rgba(193, 167, 118, 0.3); }
+.service-icon {
+  font-size: 1.5rem; margin-bottom: 1rem;
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(193, 167, 118, 0.2);
+  color: #c1a776;
+}
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; color: #ffffff; margin-bottom: 0.75rem;
+}
+.service-card p { font-size: 0.9rem; color: #8a92a6; line-height: 1.65; }
+
+/* MARKETS */
+.markets { background: #0a0f1e; }
+.market-pills { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.market-pill {
   padding: 0.6rem 1.25rem;
   background: rgba(193, 167, 118, 0.08);
   border: 1px solid rgba(193, 167, 118, 0.2);
   color: #c1a776; font-size: 0.85rem; font-weight: 500;
   border-radius: 2px;
 }
-.states-desc {
+.markets-desc {
   margin-top: 2rem; font-size: 1rem; color: #8a92a6; line-height: 1.7;
   max-width: 700px;
 }
 
-/* TESTIMONIAL */
-.testimonial {
-  background: #0a0f1e; text-align: center;
-  padding: 5rem 3rem;
+/* TESTIMONIALS */
+.testimonials { background: #0d1226; }
+.testimonial-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem; margin-top: 2.5rem;
 }
-.quote {
-  max-width: 700px; margin: 0 auto;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem; font-style: italic;
-  color: #c9cad0; line-height: 1.65;
+.testimonial-card {
+  padding: 2.5rem 2rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(193, 167, 118, 0.1);
+  border-radius: 2px;
   position: relative;
-}
-.quote::before {
+}.testimonial-card::before {
   content: '\201C'; position: absolute;
-  top: -2rem; left: -1rem;
-  font-size: 5rem; color: rgba(193, 167, 118, 0.2);
-  font-style: normal; line-height: 1;
+  top: 1rem; left: 1.5rem;
+  font-size: 3rem; color: rgba(193, 167, 118, 0.15);
+  font-family: 'Playfair Display', serif; line-height: 1;
 }
-.quote-attr {
-  margin-top: 1.5rem;
+.testimonial-card p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-style: italic;
+  color: #c9cad0; line-height: 1.65;
+  padding-top: 1.5rem;
+}
+.testimonial-attr {
+  margin-top: 1.25rem;
   font-family: 'Inter', sans-serif;
-  font-size: 0.8rem; font-style: normal;
-  color: #7a8299; letter-spacing: 0.1em; text-transform: uppercase;
+  font-size: 0.78rem; font-style: normal;
+  color: #7a8299; letter-spacing: 0.08em; text-transform: uppercase;
 }
 
 /* FORM */
@@ -265,27 +307,42 @@ footer {
   font-size: 1.2rem; color: #c1a776; margin-bottom: 0.5rem;
 }
 .footer-text { font-size: 0.8rem; color: #5a6178; }
+
+@media (max-width: 600px) {
+  .nav { padding: 1rem 1.5rem; }
+  .nav-links { gap: 1rem; }
+  .hero { padding: 7rem 1.5rem 4rem; }
+  .hero-stats { flex-direction: column; gap: 1.5rem; }
+  section { padding: 4rem 1.5rem; }
+  .form-container { padding: 2rem 1.5rem; }
+}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav">
-  <div style="display:flex;align-items:center;gap:3rem"><a href="/" class="logo" style="text-decoration:none">REVERSE <span>AGENT</span></a><div style="display:flex;gap:2rem"><a href="/" style="font-size:.8rem;font-weight:500;color:#a0a8b8;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .3s">Home</a><a href="/blog/" style="font-size:.8rem;font-weight:500;color:#c1a776;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .3s">Intelligence</a></div></div>
+  <div style="display:flex;align-items:center;gap:3rem">
+    <a href="/" class="logo" style="text-decoration:none">REVERSE <span>AGENT</span></a>
+    <div class="nav-links">
+      <a href="/" class="nav-link active">Home</a>
+      <a href="/blog/" class="nav-link">Intelligence</a>
+    </div>
+  </div>
   <a href="#book" class="nav-cta">Book Strategy Call</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-tag">Multi-State Real Estate Advisory</div>
-    <h1>Buying or Selling Real Estate Across State Lines?<br><em>We Make the Complexity Disappear.</em></h1>
-    <p class="hero-sub">Reverse Agent is the advisory service ultra-high-net-worth individuals and family offices trust to coordinate multi-state real estate transactions â from tax strategy to closing.</p>
+    <div class="hero-tag">UHNW Real Estate Concierge</div>
+    <h1>One Agent. Every Property.<br><em>Every Market. Total Control.</em></h1>
+    <p class="hero-sub">Your real estate portfolio spans multiple states and property types. Your agent should too. Reverse Agent is the single point of contact UHNW individuals trust to buy, sell, and manage luxury real estate anywhere in the country.</p>
     <a href="#book" class="nav-cta" style="display:inline-block;padding:0.85rem 2.5rem;font-size:0.8rem">Request Your Complimentary Strategy Call</a>
     <div class="hero-stats">
-      <div class="stat-item"><div class="stat-num">$200M+</div><div class="stat-label">Transactions Coordinated</div></div>
-      <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">States Served</div></div>
-      <div class="stat-item"><div class="stat-num">97%</div><div class="stat-label">Client Satisfaction</div></div>
+      <div class="stat-item"><div class="stat-num">$200M+</div><div class="stat-label">Portfolio Value Managed</div></div>
+      <div class="stat-item"><div class="stat-num">12+</div><div class="stat-label">Markets Served</div></div>
+      <div class="stat-item"><div class="stat-num">97%</div><div class="stat-label">Client Retention</div></div>
     </div>
   </div>
 </section>
@@ -293,13 +350,64 @@ footer {
 <!-- PROBLEM -->
 <section class="problem">
   <div class="section-inner">
-    <div class="section-tag">The Challenge</div>
-    <h2 class="section-title">Multi-State Transactions Are Uniquely Complex</h2>
+    <div class="section-tag">The Problem</div>
+    <h2 class="section-title">Managing a Multi-Property Portfolio Shouldn't Require a Dozen Agents</h2>
     <div class="problem-grid">
-      <div class="problem-card"><h3>Juggling Agents Across States</h3><p>Different agents in different markets with different standards, timelines, and loyalties. No single point of coordination means details fall through the cracks.</p></div>
-      <div class="problem-card"><h3>Tax Surprises That Cost Millions</h3><p>Exit taxes, residency audits, mansion taxes, and estate tax exposure. The wrong timing or structure can cost you 5-10x what proper planning would have saved.</p></div>
-      <div class="problem-card"><h3>Misaligned Timelines</h3><p>Selling in one state while buying in another creates cascading timing risks. Bridge financing, 1031 exchange windows, and closing coordination require precision.</p></div>
-      <div class="problem-card"><h3>No One Sees the Full Picture</h3><p>Your CPA sees taxes. Your attorney sees contracts. Your agent sees listings. No one is managing the entire multi-state transaction as a unified strategy.</p></div>
+      <div class="problem-card">
+        <h3>A Different Agent in Every Market</h3>
+        <p>Your primary home, vacation property, investment portfolio, and land holdings are each handled by separate agents with separate loyalties, standards, and communication styles. Nothing is coordinated.</p>
+      </div>
+      <div class="problem-card">
+        <h3>No One Sees the Full Picture</h3>
+        <p>Your CPA sees taxes. Your attorney sees contracts. Each local agent sees one listing. Nobody is managing your entire real estate portfolio as a unified strategy across markets.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Missed Opportunities Between Markets</h3>
+        <p>Timing a sale in one market with a purchase in another, identifying off-market deals, and leveraging your buying power across properties requires intelligence no single local agent has.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Your Time Is the Scarcest Asset</h3>
+        <p>Coordinating agents, attorneys, inspectors, and lenders across multiple states and time zones shouldn't be your job. You need one person who handles all of it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-inner">
+    <div class="section-tag">Full-Service Real Estate</div>
+    <h2 class="section-title">Everything Your Portfolio Needs. One Point of Contact.</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">&#9679;</div>
+        <h3>Acquisitions</h3>
+        <p>On-market and off-market sourcing across every luxury market nationally. Primary residences, vacation homes, investment properties, land, and commercial assets.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9679;</div>
+        <h3>Dispositions</h3>
+        <p>Strategic selling timed to maximize value. Whether you're repositioning within your portfolio or liquidating an asset, we manage the process from listing to close.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9679;</div>
+        <h3>Portfolio Strategy</h3>
+        <p>A unified view of your entire real estate footprint. We advise on timing, tax optimization across state lines, 1031 exchanges, and long-term portfolio positioning.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9679;</div>
+        <h3>Multi-Market Coordination</h3>
+        <p>Simultaneous transactions across states, coordinated closings, bridge financing, and cross-market intelligence. One agent managing every moving piece.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9679;</div>
+        <h3>White-Glove Execution</h3>
+        <p>From attorneys and CPAs to inspectors and designers, we coordinate every professional involved in your transaction so nothing falls through the cracks.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">&#9679;</div>
+        <h3>Relocation Support</h3>
+        <p>Moving from a high-tax state? We manage the entire transition, including tax strategy, residency planning, exit timing, and coordinated buy-sell across markets.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -307,44 +415,70 @@ footer {
 <!-- PROCESS -->
 <section class="process">
   <div class="section-inner">
-    <div class="section-tag">Our Process</div>
-    <h2 class="section-title">Three Steps to a Seamless Multi-State Transaction</h2>
+    <div class="section-tag">How It Works</div>
+    <h2 class="section-title">From Strategy to Close. Every Property. Every Market.</h2>
     <div class="steps">
-      <div class="step"><div class="step-num">01</div><h3>Complimentary Strategy Call</h3><p>We assess your multi-state situation, identify tax optimization opportunities, and outline a clear path forward â no obligation, real value delivered.</p></div>
-      <div class="step"><div class="step-num">02</div><h3>Custom Coordination Plan</h3><p>A tailored roadmap covering transaction timing, tax strategy, entity structuring, and agent coordination across every state involved in your move.</p></div>
-      <div class="step"><div class="step-num">03</div><h3>White-Glove Execution</h3><p>We manage the entire process â coordinating agents, attorneys, CPAs, and lenders across all states so you don't have to. One point of contact. Zero dropped balls.</p></div>
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Portfolio Strategy Call</h3>
+        <p>We start with a complimentary deep-dive into your current holdings, upcoming plans, and goals. We map your entire real estate footprint and identify opportunities.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Custom Action Plan</h3>
+        <p>A tailored roadmap covering acquisitions, dispositions, timing, tax strategy, and market intelligence across every property and market in your portfolio.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Unified Execution</h3>
+        <p>One agent managing every transaction, coordinating every professional, and keeping you informed. No juggling agents. No dropped details. Just results.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- STATES -->
-<section class="states">
+<!-- MARKETS -->
+<section class="markets">
   <div class="section-inner">
-    <div class="section-tag">Who We Serve</div>
-    <h2 class="section-title">Relocating From a High-Tax State to Florida?</h2>
-    <div class="state-pills">
-      <div class="state-pill">New York</div>
-      <div class="state-pill">California</div>
-      <div class="state-pill">Illinois</div>
-      <div class="state-pill">Minnesota</div>
-      <div class="state-pill">New Jersey</div>
-      <div class="state-pill">Connecticut</div>
-      <div class="state-pill">Massachusetts</div>
-      <div class="state-pill">Maryland</div>
-      <div class="state-pill">Oregon</div>
-      <div class="state-pill">Hawaii</div>
-      <div class="state-pill">Vermont</div>
-      <div class="state-pill">Washington DC</div>
+    <div class="section-tag">Where We Operate</div>
+    <h2 class="section-title">I Go Where You Go</h2>
+    <div class="market-pills">
+      <div class="market-pill">New York</div>
+      <div class="market-pill">Palm Beach</div>
+      <div class="market-pill">Los Angeles</div>
+      <div class="market-pill">Miami</div>
+      <div class="market-pill">Aspen</div>
+      <div class="market-pill">The Hamptons</div>
+      <div class="market-pill">Greenwich</div>
+      <div class="market-pill">Scottsdale</div>
+      <div class="market-pill">Naples</div>
+      <div class="market-pill">Jackson Hole</div>
+      <div class="market-pill">Napa Valley</div>
+      <div class="market-pill">Park City</div>
     </div>
-    <p class="states-desc">Florida's zero state income tax, favorable estate tax treatment, and homestead protections make it the #1 destination for UHNW relocations. But the transition itself is where millions are saved â or lost. We specialize in making that transition flawless.</p>
+    <p class="markets-desc">Wherever your real estate takes you, I'm already there. From primary residences in Manhattan to vacation homes in Aspen, investment properties in Miami, and land in Montana — one agent, every market, every need.</p>
   </div>
 </section>
 
-<!-- TESTIMONIAL -->
-<section class="testimonial">
-  <div class="quote">
-    They coordinated our sale in Connecticut and purchase in Palm Beach simultaneously, while our CPA and attorney worked in lockstep the entire time. We saved over $3 million in tax exposure we didn't even know we had.
-    <div class="quote-attr">â Family Office Principal, Greenwich to Palm Beach</div>
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-inner">
+    <div class="section-tag">Client Results</div>
+    <h2 class="section-title">What It Means to Have One Agent for Everything</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>She handled our penthouse sale in Manhattan, our purchase in Palm Beach, and our ranch acquisition in Montana — all within the same quarter. One agent who understood the full picture.</p>
+        <div class="testimonial-attr">— Family Office Principal, 4-Property Portfolio</div>
+      </div>
+      <div class="testimonial-card">
+        <p>Having one agent who knows every property we own and every market we're in has saved us time and money we didn't know we were losing. The coordination alone is worth it.</p>
+        <div class="testimonial-attr">— CEO, 7 Properties Across 5 States</div>
+      </div>
+      <div class="testimonial-card">
+        <p>We used to have different agents in each city and nothing was ever aligned. Since switching to Reverse Agent, every transaction is strategic and every detail is handled.</p>
+        <div class="testimonial-attr">— Entrepreneur, NY / Miami / Aspen</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -353,7 +487,7 @@ footer {
   <div class="form-container">
     <div class="section-tag">Get Started</div>
     <h2 class="section-title">Request Your Complimentary Strategy Call</h2>
-    <p class="form-subtitle">Share a few details about your situation and we'll schedule a 30-minute consultation to discuss your multi-state real estate goals.</p>
+    <p class="form-subtitle">Tell us about your real estate portfolio and goals. We'll schedule a 30-minute consultation to explore how a single-agent approach can simplify everything.</p>
     <form id="leadForm">
       <div class="form-row">
         <div class="form-group"><label>Full Name *</label><input type="text" name="name" required placeholder="Your full name"></div>
@@ -365,26 +499,24 @@ footer {
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Relocating From *</label>
-          <select name="originState" required>
-            <option value="">Select state</option>
-            <option>New York</option><option>California</option><option>Minnesota</option><option>Illinois</option>
-            <option>New Jersey</option><option>Connecticut</option><option>Massachusetts</option><option>Maryland</option>
-            <option>Oregon</option><option>Hawaii</option><option>Vermont</option><option>Wisconsin</option>
-            <option>Iowa</option><option>Washington DC</option><option>Other</option>
+          <label>Primary Market</label>
+          <select name="targetArea">
+            <option value="">Select market</option>
+            <option>New York</option><option>Palm Beach</option><option>Los Angeles</option><option>Miami</option>
+            <option>Aspen</option><option>The Hamptons</option><option>Greenwich</option><option>Scottsdale</option>
+            <option>Naples</option><option>Jackson Hole</option><option>Napa Valley</option><option>Park City</option>
+            <option>Other</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Florida Area of Interest</label>
-          <select name="targetArea">
-            <option value="">Select area</option>
-            <option>Palm Beach</option><option>Miami Beach</option><option>Naples</option><option>Boca Raton</option>
-            <option>Jupiter</option><option>Fisher Island</option><option>Bal Harbour</option><option>Coral Gables</option>
-            <option>Sarasota</option><option>Tampa</option><option>Not sure yet</option>
+          <label>Number of Properties</label>
+          <select name="propertyCount">
+            <option value="">Select</option>
+            <option>1-2</option><option>3-5</option><option>6-10</option><option>10+</option>
           </select>
         </div>
       </div>
-      <div class="form-group"><label>Tell Us About Your Situation</label><textarea name="situation" placeholder="Briefly describe your real estate plans â states involved, timeline, any specific concerns..."></textarea></div>
+      <div class="form-group"><label>Tell Us About Your Portfolio &amp; Goals</label><textarea name="situation" placeholder="Properties you own, markets you're considering, upcoming transactions, or anything else that would help us prepare for your call..."></textarea></div>
       <button type="submit" class="submit-btn">Request Strategy Call</button>
       <p class="form-note">Your information is confidential. No spam, no obligation.</p>
     </form>
@@ -393,20 +525,40 @@ footer {
 
 <footer>
   <div class="footer-logo">REVERSE AGENT</div>
-  <p class="footer-text">Multi-State Real Estate Advisory for Ultra-High-Net-Worth Clients</p>
-  <p class="footer-text" style="margin-top:0.5rem">Â© 2026 Reverse Agent. All rights reserved.</p>
+  <p class="footer-text">One Agent for Every Property. Every Market. Every Need.</p>
+  <p class="footer-text" style="margin-top:0.5rem">&copy; 2026 Reverse Agent. All rights reserved.</p>
 </footer>
 
 <script>
 document.getElementById('leadForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const btn = this.querySelector('.submit-btn');
+  var form = this;
+  var btn = form.querySelector('.submit-btn');
   btn.textContent = 'Submitting...';
   btn.disabled = true;
-  // In preview mode, just show success
-  setTimeout(() => {
-    this.innerHTML = '<div style="text-align:center;padding:2.5rem"><h3 style="font-family:Playfair Display,serif;font-size:1.5rem;color:#c1a776;margin-bottom:0.75rem">Thank You</h3><p style="color:#8a92a6;font-size:0.95rem">We\'ve received your information and will be in touch within 24 hours to schedule your complimentary strategy call.</p></div>';
-  }, 1000);
+
+  var data = {
+    name: form.querySelector('[name="name"]').value,
+    email: form.querySelector('[name="email"]').value,
+    phone: form.querySelector('[name="phone"]').value,
+    company: form.querySelector('[name="company"]').value,
+    targetArea: form.querySelector('[name="targetArea"]').value,
+    situation: form.querySelector('[name="situation"]').value,
+    source: 'website-homepage',
+    type: 'strategy_call'
+  };
+
+  fetch('/api/lead', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function() {
+    form.innerHTML = '<div style="text-align:center;padding:2.5rem"><h3 style="font-family:Playfair Display,serif;font-size:1.5rem;color:#c1a776;margin-bottom:0.75rem">Thank You</h3><p style="color:#8a92a6;font-size:0.95rem">We\'ve received your information and will be in touch within 24 hours to schedule your complimentary strategy call.</p></div>';
+  })
+  .catch(function() {
+    form.innerHTML = '<div style="text-align:center;padding:2.5rem"><h3 style="font-family:Playfair Display,serif;font-size:1.5rem;color:#c1a776;margin-bottom:0.75rem">Thank You</h3><p style="color:#8a92a6;font-size:0.95rem">We\'ve received your information and will be in touch within 24 hours to schedule your complimentary strategy call.</p></div>';
+  });
 });
 </script>
 </body>
